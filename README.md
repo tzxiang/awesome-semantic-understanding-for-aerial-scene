@@ -10,40 +10,40 @@ A curated list of awesome resources for semantic understanding of aerial scene, 
 
 Table of Content
 
-- [Tutorial](#Tutorial)
+- [Tutorials](#Tutorials)
 - [Libraries](#Libraries)
 - [Datasets](#Datasets)
 
-- [Papers for Aerial Scene](#Papers for Aerial Scene)
-  - [Review](#Review)
-  - [Object Detection](#Object Detection)
-  - [Typical Element Extraction](#Typical Element Extraction)
-  - [Semantic Segmentation](#Semantic Segmentation)
-  - [Object Tracking](#Object Tracking)
-  - [Aerial Reconstrcution](#Aerial Reconstrcution)
-  - [Scene Understanding/Change Detection](#Scene Understanding/Change Detection)
+- [Papers for Aerial Scene](#Papers-for-Aerial-Scene)
+  - [Reviews](#Reviews)
+  - [Object Detection (RS)](#Object-Detection-RS)
+  - [Typical Element Extraction](#Typical-Element-Extraction)
+  - [Semantic Segmentation](#Semantic-Segmentation)
+  - [Object Tracking](#Object-Tracking)
+  - [Scene Understanding/Change Detection](#Scene-Understanding-Change-Detection)
+  - [Aerial Reconstrcution](#Aerial-Reconstrcution)
   - [Generation](#Generation)
   - [Enhancement](#Enhancement)
-  - [RS Application](#RS Application)
+  - [RS Application](#RS-Application)
 
-- [Appendix: Object Detection for Natural Scene](#Appendix: Object Detection for Natural Scene)
+- [Appendix: Object Detection for Natural Scene](#Appendix-Object-Detection-for-Natural-Scene)
 
   - [Tutorial](#Tutorial)
 
-  - [Datasets](#Datasets)
+  - [Dataset](#Dataset)
 
   - [Papers](#Papers )
 
     - [Notes](#Notes)
 
     - [Review](#Review)
-    - [Object Detection](#Object Detection)
-    - [Instance Segmentation](#Instance Segmentation)
-    - [Salient ObDet](#Salient ObDet)
-    - [3D ObDet](#3D ObDet)
-    - [Lane detection](#Lane detection)
-    - [Other: Traffic/Fruit/Shadow](#Other: Traffic/Fruit/Shadow)
-    - [Text Inspiration](#Text Inspiration)
+    - [Object Detection](#Object-Detection)
+    - [Instance Segmentation](#Instance-Segmentation)
+    - [Salient ObDet](#Salient-ObDet)
+    - [3D ObDet](#3D-ObDet)
+    - [Lane detection](#Lane-detection)
+    - [Other: Traffic/Fruit/Shadow](#Other-Traffic-Fruit-Shadow)
+    - [Text Inspiration](#Text-Inspiration)
 
 ------
 
@@ -392,7 +392,7 @@ Table of Content
 
 
 
-### Object Detection
+### Object Detection (RS)
 
 #### Generic Object detection (*Rotation Issues*)
 
