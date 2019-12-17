@@ -2,22 +2,50 @@
 
 <!-- [`awesome.re`](https://awesome.re/) -->
 
- [![Awesome](https://camo.githubusercontent.com/13c4e50d88df7178ae1882a203ed57b641674f94/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667)](https://github.com/sindresorhus/awesome)
-
-A curated list of awesome resources for semantic understanding of aerial scene,  e.g. tutorials, papers, books, datasets, libraries and software.  inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
+A curated list of awesome resources for semantic understanding of aerial scene,  e.g. tutorials, papers, books, datasets, libraries and software.  inspired by [awesome-php](https://github.com/ziadoz/awesome-php).  [![Awesome](https://camo.githubusercontent.com/13c4e50d88df7178ae1882a203ed57b641674f94/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667)](https://github.com/sindresorhus/awesome)
 
 
 
 [TOC]
 
-Table of content
+Table of Content
 
 - [Tutorial](#Tutorial)
+- [Libraries](#Libraries)
+- [Datasets](#Datasets)
+
+- [Papers for Aerial Scene](#Papers for Aerial Scene)
+  - [Review](#Review)
+  - [Object Detection](#Object Detection)
+  - [Typical Element Extraction](#Typical Element Extraction)
+  - [Semantic Segmentation](#Semantic Segmentation)
+  - [Object Tracking](#Object Tracking)
+  - [Aerial Reconstrcution](#Aerial Reconstrcution)
+  - [Scene Understanding/Change Detection](#Scene Understanding/Change Detection)
+  - [Generation](#Generation)
+  - [Enhancement](#Enhancement)
+  - [RS Application](#RS Application)
+
+- [Appendix: Object Detection for Natural Scene](#Appendix: Object Detection for Natural Scene)
+
+  - [Tutorial](#Tutorial)
+
   - [Datasets](#Datasets)
 
-- [Dataset repo](##Dataset Repository)
+  - [Papers](#Papers )
 
+    - [Notes](#Notes)
 
+    - [Review](#Review)
+    - [Object Detection](#Object Detection)
+    - [Instance Segmentation](#Instance Segmentation)
+    - [Salient ObDet](#Salient ObDet)
+    - [3D ObDet](#3D ObDet)
+    - [Lane detection](#Lane detection)
+    - [Other: Traffic/Fruit/Shadow](#Other: Traffic/Fruit/Shadow)
+    - [Text Inspiration](#Text Inspiration)
+
+------
 
 
 
@@ -366,7 +394,7 @@ Table of content
 
 ### Object Detection
 
-#### - Generic Object detection (*Rotation Issues*)
+#### Generic Object detection (*Rotation Issues*)
 
 - IENet: Interacting Embranchment One Stage Anchor Free Detector for Orientation Aerial Object Detection, arXiv201912
 
@@ -449,13 +477,13 @@ Table of content
 
 
 
-#### - Salient Object Detection
+#### Salient Object Detection
 
 - [2019TGRS]  Nested Network with Two-Stream Pyramid for Salient Object Detection in Optical Remote Sensing Images  [[Proj]](https://li-chongyi.github.io/proj_optical_saliency.html)
 
 
 
-#### - Specific Object Detection  
+#### Specific Object Detection  
 
 **Vehicle Detection**
 
@@ -491,7 +519,7 @@ Table of content
 
 ### Typical Element Extraction
 
-#### - Road Extraction
+#### Road Extraction
 
 - [**2019ICCV**] Neural Turtle Graphics for Modeling City Road Layouts
 - [**2019CVPR**]  Leveraging Crowdsourced GPS Data for Road Extraction from Aerial Imagery    
@@ -513,7 +541,7 @@ Table of content
 
 
 
-#### - Building Extraction
+#### Building Extraction
 
 - MAP-Net: Multi Attending Path Neural Network for Building Footprint Extraction from Remote Sensed Imagery, 2019
 - [**2019CVPR**] DARNet: Deep Active Ray Network for Building Segmentation
@@ -556,6 +584,18 @@ Table of content
 
 
 
+### Scene Understanding/Change Detection
+
+- [2019CVIU] Multitask Learning for Large-scale Semantic Change Detection
+- [**2017ICCV**] A Unified Model for Near and Remote Sensing, ICCV2017 [[Proj]](http://cs.uky.edu/~scott/research/unified/)
+- [2017CVPRW] On the Role of Representations for Reasoning in Large-Scale Urban Scenes [[Code]](https://people.csail.mit.edu/rcabezas/code)
+
+- [2015CVPRW] Simultaneous registration and change detection in multitemporal, very high resolution remote sensing data
+
+
+
+
+
 ### Aerial Reconstrcution
 
 - [**2018ECCV**] Neural Procedural Reconstruction for Residential Buildings
@@ -568,16 +608,6 @@ Table of content
 - [**2014ECCV**] Aerial Reconstructions via Probabilistic Data Fusion [[Proj]](https://groups.csail.mit.edu/vision/sli/projects.php?name=aerial_lidar_fusion) [[Code]](https://people.csail.mit.edu/rcabezas/code) [[Author]](https://www.cs.bgu.ac.il/~orenfr/papers.htm)
 
 - [2014CVPRW] Automatic Geo-location Correction of Satellite Imagery 
-
-
-
-
-
-### Scene Understanding
-
-- [**2017ICCV**] A Unified Model for Near and Remote Sensing, ICCV2017 [[Proj]](http://cs.uky.edu/~scott/research/unified/)
-
-- [2017CVPRW] On the Role of Representations for Reasoning in Large-Scale Urban Scenes [[Code]](https://people.csail.mit.edu/rcabezas/code)
 
 
 
@@ -710,7 +740,9 @@ The figure shows a development of object detection for natural images.
 ![img](Imgs/dl_obdet_history.png)
 
 <center><font size=2>Fig. History of Deep learning-based object detection (2014-2019)</font></center>
-<font size=2>Comments: Pictures from Deep Learning for Generic Object Detection: A Survey</font>>
+
+
+<font size=2>Comments: Pictures from Deep Learning for Generic Object Detection: A Survey</font>
 
 
 
