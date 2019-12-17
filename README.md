@@ -317,11 +317,10 @@ Table of content
 
 -  [**Massachusetts Buildings Dataset**](https://www.cs.toronto.edu/~vmnih/data/) (2013)
 
-  The size of all images is 1500×1500, and the resolution is 1m. It consists of 137 sets of aerial images and corresponding single-channel label images for training part, 10 for testing part, and 4 for validation part.
-  **Reference:** Mnih V. Machine learning for aerial image labeling[D]. University of Toronto (Canada), 2013.
-
-  **Comments**: poor quality of dataset.
-
+  The size of all images is 1500×1500, and the resolution is 1m. It consists of 137 sets of aerial images and corresponding single-channel label images for training part, 10 for testing part, and 4 for validation part. Reference: Mnih V. Machine learning for aerial image labeling[D]. University of Toronto (Canada), 2013.
+  
+**Comments**: poor quality of dataset.
+  
 - [**ISPRS-Vaihingen/Potsdam dataset**](http://www.isprs.org/commissions/comm3/wg4/tests.html)
   6 urban land cover classes, raster mask labels, 4-band RGB-IR aerial imagery (0.05m res.) & DSM, 38 image patches. [ISPRS Potsdam 2D Semantic Labeling Contest](http://www2.isprs.org/commissions/comm3/wg4/2d-sem-label-potsdam.html)
 
@@ -383,7 +382,7 @@ Table of content
 
 - Salience Biased Loss for Object Detection in Aerial Images, arXiv201810
 
-- --
+- 
 
 - [**2019IJCV**] The Unmanned Aerial Vehicle Benchmark: Object Detection, Tracking and Baseline
 
@@ -438,7 +437,7 @@ Table of content
 - [**2016ECCV**] A Large Contextual Dataset for Classification, Detection and Counting of Cars with Deep Learning  [[Dataset]](https://gdo152.llnl.gov/cowc/)
 - [2015CVPRW] Do Deep Features Generalize from Everyday Objects to Remote Sensing and Aerial Scenes Domains
 
-- --
+- 
 
 - [2019ICCVW] Fast Visual Object Tracking with Rotated Bounding Boxes [[Code]](https://github.com/baoxinchen/siammask_e)
 - [2018WACV] Rotation Adaptive Visual Object Tracking with Motion Consistency
@@ -701,13 +700,17 @@ The figure shows a development of object detection for natural images.
 ![img](Imgs/obdetdevelop.png)
 
 <center><font size=2>Fig. Development of object detection</font></center>
+
+
 ![img](Imgs/obdetreview.png)
 
 <center><font size=2>Fig. Milestones in generic object detection</font></center>
+
+
 ![img](Imgs/dl_obdet_history.png)
 
 <center><font size=2>Fig. History of Deep learning-based object detection (2014-2019)</font></center>
-[^注]: Pictures from Deep Learning for Generic Object Detection: A Survey
+<font size=2>Comments: Pictures from Deep Learning for Generic Object Detection: A Survey</font>>
 
 
 
