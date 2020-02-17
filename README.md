@@ -6,9 +6,23 @@ A curated list of awesome resources for semantic understanding of aerial scene, 
 
 
 
-[TOC]
+**Table of Content**
 
-Table of Content
+- [Tutorials](#Tutorials)
+- [Libraries](#Libraries)
+- [Datasets](#Datasets)
+
+- [Papers for Aerial Scene](#Papers-for-Aerial-Scene)
+  - [Reviews](#Reviews)
+  - [Object Detection (RS)](#Object-Detection-RS)
+  - [Typical Element Extraction](#Typical-Element-Extraction)
+  - [Semantic Segmentation](#Semantic-Segmentation)
+  - [Object Tracking](#Object-Tracking)
+  - [Scene Understanding/Change Detection](#Scene-Understanding-Change-Detection)
+  - [Aerial Reconstrcution](#Aerial-Reconstrcution)
+  - [Generation](#Generation)
+  - [Enhancement](#Enhancement)
+  - [RS Application](#RS-Application)
 
 - [Tutorials](#Tutorials)
 - [Libraries](#Libraries)
@@ -47,15 +61,13 @@ Table of Content
 
 ------
 
-
+[TOC]
 
 ## Tutorials
 
 - 多源多谱段图像融合的数学方法与应用 (A Review of MS+PAN), 肖亮, 201911 [[Page]](https://mp.weixin.qq.com/s/NRmeggM6wXUPPX90auKYqA)
-
 - 吴一戎: 遥感与智能-AI赋能遥感技术的思考 [[Page]](https://mp.weixin.qq.com/s/pNZzs4udjpGDugZOGxWJdw)
-
-
+- [Report] 胡翔云：遥感影像典型要素的智能解译 [[Slides]](/Docs/遥感影像典型要素的智能解译.pdf)
 
 
 
@@ -75,7 +87,15 @@ Table of Content
 
 - LocaSpace Viewer: 3D digital earth software, including satellite images, map, trajectory. 
 
+- **TorchSat: Pytorch-based satellite imagery analysis framework** [[Homepage]](https://torchsat.readthedocs.io/) [[github]](https://github.com/sshuair/torchsat)
+
+  TorchSat is an open-source deep learning framework for satellite imagery analysis based on PyTorch. This project is started in 2019 and is still work in progress. Highlight: 
   
+  - Support multi-channels(> 3 channels, e.g. 8 channels) images and TIFF file as input; 
+  - Data augmentation method for classification, sementic segmentation and object detection; 
+  - Models for satellite vision tasks, e.g. ResNet, DenseNet, UNet, PSPNet, SSD, Faster RCNN...
+  - Lots of common satellite datasets loader; 
+  - Training script for common satellite vision tasks. 
 
 ### Object Detection
 
@@ -140,7 +160,7 @@ Table of Content
 
 - [六大GIS地图数据源](https://chuansongme.com/n/1581430352843): Natural Earth Data, OSM, Diva GIS, UNEP Env Data, ISCGM, BDP.
 
-  
+
 
 ### Satellite Image Understanding
 
@@ -163,7 +183,7 @@ Table of Content
   Spacenet Challenge Round 5 - [Road Network Extraction, Routing, Travel Time Estimation](https://www.topcoder.com/challenges/30099956) (CosmiQ Works, Maxar, Intel, AWS, Sep 2019): 
   2300 image chips, street geometries with location, shape and estimated travel time, 3/8band Worldview-3 imagery (0.3m res.), 4 global cities, 1 holdout city for leaderboard evaluation, [APLS](https://github.com/CosmiQ/apls) metric, [baseline model](https://github.com/CosmiQ/cresi)
 
-  
+
 
 ### Object Detection for Aerial Scene
 
@@ -201,8 +221,6 @@ Table of Content
   To detect flying objects such as UAVs and aircrafts.
   Reference: Detecting Flying Objects using a Single Moving Camera, CVPR2015, PAMI2017
 
-  
-
 #### Specific object detection
 
 - **Cars Overhead With Context (COWC)** [[Dataset]](https://gdo152.llnl.gov/cowc/) [[Howtouse]](https://arthurdouillard.com/post/nato-challenge/)
@@ -227,7 +245,7 @@ Table of Content
 
   WPAFB contains imagery from a large format Earth Observation platform. The scene is a flyover of WPAFB, OH and the surrounding area. The sensor is a large format monochromatic electro-optical sensor comprised of a matrix of six cameras. They were mosaicked to form a combined image of the scene. Each camera had a focal length of 105 mm. 
 
-- **SAR-Ship-Dataset** [[Dataset]](https://github.com/CAESAR-Radi/SAR-Ship-Dataset)
+- **SAR-Ship-Dataset** [[Dataset]](https://github.com/CAESAR-Radi/SAR-Ship-Dataset) [[Intro]](https://zhuanlan.zhihu.com/p/84990739) [[Note]](https://zhuanlan.zhihu.com/p/104260766)
 
   中国科学院空天信息研究院王超研究员团队构建的多源、多模式的SAR船舶切片数据集；
 
@@ -243,26 +261,20 @@ Table of Content
 
   Reference: [**2019RS**] A SAR Dataset of Ship Detection for Deep Learning under Complex Backgrounds.
 
-  > 一个小规模的SAR Ship Detection Dataset (SSDD): 
+  > Other SAR dataset:
   >
-  > 该数据集的SAR图像是RadarSat-2、TerraSAR-X和Sentinel-1; 
+  > - [ISSID](https://github.com/chaozhong2010/ISSID):  a data set for ship detection, semantic segmentation, and instance segmentation tasks in high-resolution SAR images in 2020. 
   >
-  > 数据由含2456船舶的1160船舶切片; 
+  > - [AIR-SARShip-1.0](http://radars.ie.ac.cn/web/data/getData?dataType=SARDataset): 高分辨率SAR舰船检测数据集(2019)，首批发布31幅图像，图像分辨率包括1m和3m.
   >
-  > 其图像的分辨率既包括高分辨率和中低分辨率图像;
+  > - 一个小规模的SAR Ship Detection Dataset (SSDD): 
   >
-  > 图像的尺寸不固定，即船舶的切片的长和宽是不定的. 
-  >
-  > Reference: Li J , Qu C , Shao J . Ship detection in SAR images based on an improved faster R-CNN, IEEE BIGSARDATA Conf, 2017.
-
-
+  >   该数据集的SAR图像是RadarSat-2、TerraSAR-X和Sentinel-1; 数据由含2456船舶的1160船舶切片; 其图像的分辨率既包括高分辨率和中低分辨率图像; 图像的尺寸不固定，即船舶的切片的长和宽是不定的. Reference: Li J , Qu C , Shao J . Ship detection in SAR images based on an improved faster R-CNN, IEEE BIGSARDATA Conf, 2017.
 
 - **ESRI Data Science Challenge 2019** [[Homepage]](https://www.hackerearth.com/en-us/challenges/hiring/esri-data-science-challenge-2019/) [[Dataset-SwimmingPoolCarDet]](https://www.kaggle.com/kbhartiya83/swimming-pool-and-car-detection) [[WinningSolution]](https://github.com/kunwar31/ESRI_Object_Detection) [[3rdSolution]](https://towardsdatascience.com/object-detection-on-aerial-imagery-using-retinanet-626130ba2203) 
 
 - **Nanonets** [[Homepage]](https://nanonets.com/drone/)
   A company to create custom Deep Learning models to detect a variety of objects in images captured by drones with minimal data & limited knowledge of machine learning.
-
-
 
 #### Instance Segmentation
 
@@ -347,8 +359,9 @@ Table of Content
 
   The size of all images is 1500×1500, and the resolution is 1m. It consists of 137 sets of aerial images and corresponding single-channel label images for training part, 10 for testing part, and 4 for validation part. Reference: Mnih V. Machine learning for aerial image labeling[D]. University of Toronto (Canada), 2013.
   
+
 **Comments**: poor quality of dataset.
-  
+
 - [**ISPRS-Vaihingen/Potsdam dataset**](http://www.isprs.org/commissions/comm3/wg4/tests.html)
   6 urban land cover classes, raster mask labels, 4-band RGB-IR aerial imagery (0.05m res.) & DSM, 38 image patches. [ISPRS Potsdam 2D Semantic Labeling Contest](http://www2.isprs.org/commissions/comm3/wg4/2d-sem-label-potsdam.html)
 
@@ -364,13 +377,11 @@ Table of Content
 
 - ALOS dataset: ALOS World 3D-30m (AW3D30) [[Page]](http://www.eorc.jaxa.jp/ALOS/en/aw3d30/)
 
-
+- **UrbanNav** dataset: an Open-Sourcing Localization Data Collected in Asian Urban Canyons, Including Tokyo and Hong Kong (GNSS/LiDAR/IMU/Camera data) by PolyU IPNL (2019) [[Page]](https://www.polyu-ipn-lab.com/urbannav)
 
 
 
 ## Papers for Aerial Scene
-
-
 
 ### Review
 
@@ -388,19 +399,25 @@ Table of Content
 
 - [2017TGRS] AID: A Benchmark Data Set for Performance Evaluation of Aerial Scene Classification
 
+- [2019JIG] 卫星遥感及图像处理平台发展 [[PDF]](http://www.cjig.cn/html/jig/2019/12/20191203.htm#materials_and_methodss2-1)
+
   
-
-
 
 ### Object Detection (RS)
 
 #### Generic Object detection (*Rotation Issues*)
 
-- IENet: Interacting Embranchment One Stage Anchor Free Detector for Orientation Aerial Object Detection, arXiv201912
+- > [基于深度学习的高分辨率遥感图像目标检测](https://blog.csdn.net/weixin_36670529/article/details/95976024)
+  >
+  > [DOTA-DOAI](https://github.com/SJTU-Thinklab-Det/DOTA-DOAI)
+
+- Oriented Objects as pairs of Middle Lines. [O^2-DNet]. [arXiv201912](https://arxiv.org/abs/1912.10694)
+
+- IENet: Interacting Embranchment One Stage Anchor Free Detector for Orientation Aerial Object Detection. [arXiv201912](https://arxiv.org/abs/1912.00969)
 
 - Learning Modulated Loss for Rotated Object Detection, arXiv2019.11
 
-- Gliding vertex on the horizontal bounding box for multi-oriented object detection, 201911
+- Gliding vertex on the horizontal bounding box for multi-oriented object detection, arXiv201911
 
 - Deep Learning for 2D and 3D Rotatable Data: An Overview of Methods, 201910
 
@@ -410,15 +427,13 @@ Table of Content
 
 - Salience Biased Loss for Object Detection in Aerial Images, arXiv201810
 
-- 
-
 - [**2019IJCV**] The Unmanned Aerial Vehicle Benchmark: Object Detection, Tracking and Baseline
 
 - [**2019ICCV**] Delving into Robust Object Detection from Unmanned Aerial Vehicles: A Deep Nuisance Disentanglement Approach
 
 - [**2019ICCV**] Clustered Object Detection in Aerial Images [[Note]](https://cloud.tencent.com/developer/article/1518963)
 
-- [**2019ICCV**] SCRDet: Towards More Robust Detection for Small, Cluttered and Rotated Objects [[github]](https://github.com/DetectionTeamUCAS/R2CNN-Plus-Plus_Tensorflow)
+- [**2019ICCV**] [R2CNN++] SCRDet: Towards More Robust Detection for Small, Cluttered and Rotated Objects [Dense/Small Obj] [[github]](https://github.com/DetectionTeamUCAS/R2CNN-Plus-Plus_Tensorflow)
 
   > Position Detection and Direction Prediction for Arbitrary-Oriented Ships via Multitask Rotation Region Convolutional Neural Network, IEEE Access, 2018 [[github]](https://github.com/yangxue0827/R-DFPN_FPN_Tensorflow) [[github]](https://github.com/yangxue0827/R2CNN_HEAD_FPN_Tensorflow)
   >
@@ -435,7 +450,9 @@ Table of Content
 - [2019CVPRW] Learning Object-Wise Semantic Representation for Detection in Remote Sensing Imagery
 
 - [**2019TIP**] Learning rotation-invariant and Fisher discriminative convolutional neural networks for object detection
+
 - [2019PR] Rotated cascade R-CNN: A shape robust detector with coordinate regression
+
 - [2019TGRS] CAD-Net: A Context-Aware Detection Network for Objects in Remote Sensing Imagery
 
 - [2019RS] Geospatial Object Detection on High Resolution Remote Sensing Imagery Based on Double Multi-Scale Feature Pyramid Network
@@ -451,23 +468,33 @@ Table of Content
 - [20193DV] IoU Loss for 2D/3D Object Detection  [rotation bbox IOU]
 
 - [**2018ICLR**] Unsupervised Representation Learning by Predicting Image Rotations [[Code]](https://github.com/gidariss/FeatureLearningRotNet) 
+
 - [**2018CVPR**] DOTA: A Large-Scale Dataset for Object Detection in Aerial Images
 
 - [**2018ECCV**] The Unmanned Aerial Vehicle Benchmark: Object Detection and Tracking [UAVDT Dataset]
+
 - [2018TGRS] R3-Net: A Deep Network for Multi-oriented Vehicle Detection in Aerial Images and Videos
+
 - [2018TGRS] Rotation-insensitive and context augmented object detection in remote sensing images
 
 - [2018ACCV] Towards Multi-class Object Detection in Unconstrained Remote Sensing Imagery
 
+- [2017] Learning a Rotation Invariant Detector with Rotatable Bounding Box [[Code]](https://github.com/liulei01/DRBox)
+
 - [**2016ISPRSJ**] A survey on object detection in optical remote sensing images
+
 - [2016TGRS] Learning rotation-invariant convolutional neural networks for object detection in VHR optical remote sensing images [[code]](https://pan.baidu.com/s/158JPjYQvXwnkrAqKF72Jgg)
+
 - [**2016CVPR**] RIFD-CNN: Rotation-invariant and Fisher discriminative convolutional neural networks for object detection [[Note]](https://zhuanlan.zhihu.com/p/57481166)
+
 - [**2016ECCV**] A Large Contextual Dataset for Classification, Detection and Counting of Cars with Deep Learning  [[Dataset]](https://gdo152.llnl.gov/cowc/)
+
 - [2015CVPRW] Do Deep Features Generalize from Everyday Objects to Remote Sensing and Aerial Scenes Domains
 
 - 
 
 - [2019ICCVW] Fast Visual Object Tracking with Rotated Bounding Boxes [[Code]](https://github.com/baoxinchen/siammask_e)
+
 - [2018WACV] Rotation Adaptive Visual Object Tracking with Motion Consistency
 
 
@@ -505,15 +532,17 @@ Table of Content
 
 - [2019] X-LineNet: Detecting Aircraft in Remote Sensing Images by a pair of Intersecting Line Segments, arXiv2019.7
 
-**Other Object**
+**Agriculture**
 
-- [**2016CVPR**] Cataloging Public Objects Using Aerial and Street-Level Images - Urban Trees
+- [2019AAAI] Tile2Vec: Unsupervised representation learning for spatially distributed data [crop-detection] [[Code]](https://github.com/simongrest/farm-pin-crop-detection-challenge) 
+- [2019ICMLW] BreizhCrops: A Satellite Time Series Dataset for Crop Type Identification [[Code]](https://github.com/TUM-LMF/BreizhCrops)
 
-- [**2015CVPR**] Large-Scale Damage Detection Using Satellite Imagery
+**Other Objects**
 
 - [2019CVPRW] The Aerial Elephant Dataset: A New Public Benchmark for Aerial Object Detection
-
-
+- [2018CVPRW] Eye in the Sky: Real-time Drone Surveillance System (DSS) for Violent Individuals Identification using ScatterNet Hybrid Deep Learning Network
+- [**2016CVPR**] Cataloging Public Objects Using Aerial and Street-Level Images (Urban Trees)
+- [**2015CVPR**] Large-Scale Damage Detection Using Satellite Imagery
 
 
 
@@ -539,8 +568,6 @@ Table of Content
 
 - [**2015ICCV**] Enhancing Road Maps by Parsing Aerial Images Around the World
 
-
-
 #### Building Extraction
 
 - MAP-Net: Multi Attending Path Neural Network for Building Footprint Extraction from Remote Sensed Imagery, 2019
@@ -555,8 +582,6 @@ Table of Content
 
 
 
-
-
 ### Semantic Segmentation
 
 - Boundary Loss for Remote Sensing Imagery Semantic Segmentation, arXiv2019.5 [[Code]](https://github.com/yiskw713/boundary_loss_for_remote_sensing)
@@ -564,35 +589,29 @@ Table of Content
 - [**2019ICCV**] SkyScapes Fine-Grained Semantic Understanding of Aerial Scenes
 - [2018RS] ERN: Edge Loss Reinforced Semantic Segmentation Network for Remote Sensing Images [[github]](https://github.com/liushuo2018/ERN) 
 
-
-
 **Instance Segmentation**
 
 - [2019TGRS] Vehicle Instance Segmentation from Aerial Image and Video Using a Multi-Task Learning Residual Fully Convolutional Network
 
 
 
-
-
 ### Object Tracking
 
-- [**2017AAAI**] Visual Object Tracking for Unmanned Aerial Vehicles: A Benchmark and	New Motion Models
-- [**2016ECCV**] A Benchmark and Simulator for UAV Tracking
-- [**2014CVPR**] Persistent Tracking for Wide Area Aerial Surveillance
-
-
+- [2019MMM] Eye in the Sky: Drone-Based Object Tracking and 3D Localization
+- [2017AAAI] Visual Object Tracking for Unmanned Aerial Vehicles: A Benchmark and New Motion Models
+- [2016ECCV] A Benchmark and Simulator for UAV Tracking
+- [2014CVPR] Persistent Tracking for Wide Area Aerial Surveillance
 
 
 
 ### Scene Understanding/Change Detection
 
 - [2019CVIU] Multitask Learning for Large-scale Semantic Change Detection
-- [**2017ICCV**] A Unified Model for Near and Remote Sensing, ICCV2017 [[Proj]](http://cs.uky.edu/~scott/research/unified/)
+- [2018SigPort] Siamese Network with Multi-level Features for Patch-based Change Detection in Satellite Imagery [[Code]](https://github.com/vbhavank/Siamese-neural-network-for-change-detection)
+- [**2017ICCV**] A Unified Model for Near and Remote Sensing [[Proj]](http://cs.uky.edu/~scott/research/unified/)
 - [2017CVPRW] On the Role of Representations for Reasoning in Large-Scale Urban Scenes [[Code]](https://people.csail.mit.edu/rcabezas/code)
-
 - [2015CVPRW] Simultaneous registration and change detection in multitemporal, very high resolution remote sensing data
-
-
+- [2011PAMI] Statistical change detection by the pool adjacent violators algorithm
 
 
 
@@ -611,8 +630,6 @@ Table of Content
 
 
 
-
-
 ### Generation
 
 - Generating High Quality Visible Images from SAR Images Using CNNs, arXiv2018.2
@@ -625,15 +642,12 @@ Table of Content
 
 
 
+### Enhancement/Fusion
 
-
-### Enhancement
-
+- [2020MTA] Fully convolutional network-based infrared and visible image fusion
+- [2019InfFus] FusionGAN: A generative adversarial network for infrared and visible image fusion
 - [**2016CVPR**] Removing Clouds and Recovering Ground Observations in Satellite Image Sequences via Temporally Contiguous Robust Matrix Completion
-
 - [2015TGRS] A Critical Comparison Among Pansharpening Algorithms [[Code]](https://rscl-grss.org/coderecord.php?id=541)
-
-
 
 
 
@@ -669,7 +683,16 @@ Table of Content
 
 - OpenCV Vehicle Detection, Tracking, and Speed Estimation, 2019 [[Page]](https://www.pyimagesearch.com/2019/12/02/opencv-vehicle-detection-tracking-and-speed-estimation/)
 
+#### Blog
 
+- [Deep learning for object detection: performance table and paper list](https://github.com/hoya012/deep_learning_object_detection)
+- [The Path to Object Detection (Step One): The Storyline of Evaluation Metrics](https://mercurise.github.io/Object-Detection-Metrics-Storyline/) [[mmAP]](https://zhuanlan.zhihu.com/p/55575423)
+- [[Object Detection Note]](https://zhuanlan.zhihu.com/p/82491218)
+- [CVPR2019目标检测方法进展](https://mp.weixin.qq.com/s/mu_4kNGZuExxUK2JFTdDFw) 
+- [目标检测算法中检测框合并策略技术综述](https://zhuanlan.zhihu.com/p/48169867)
+- [自然场景下的文字检测: 从多方向迈向任意形状](https://zhuanlan.zhihu.com/p/68058851)
+- Anchor Review [[Page1]](https://zhuanlan.zhihu.com/p/63273342) [[Page2]](https://zhuanlan.zhihu.com/p/68291859?utm_source=wechat_timeline&utm_medium=social&utm_oi=34034784665600&from=timeline&isappinstalled=0)
+- [攻克目标检测难点秘籍一：模型加速之轻量化网络](https://mp.weixin.qq.com/s/SPSmsdbfE1IE-AgI03J3wA)
 
 
 
@@ -679,7 +702,7 @@ Table of Content
 
 - COCO/VOC/ImageNet/KITTI
 
-- [**Objects365**](http://www.objects365.org/overview.html) (Megvii, 2019)
+- [**Objects365**](http://www.objects365.org/overview.html) (Megvii, 2019) [[Note]](https://mp.weixin.qq.com/s?__biz=MzU0NTAyNTQ1OQ==&mid=2247488408&idx=1&sn=4330a7d69afc7e306f635efc2e7cc0c4&chksm=fb726f44cc05e6528322db4de2f44e7add28911321dd9632c73cb7fc11aeb8f5f8737a3a1456&mpshare=1&scene=23&srcid&sharer_sharetime=1576471483562&sharer_shareid=d3d8827bce826478944c5e3a9f67ed4b%23rd)
 
   Objects365 is a brand new dataset, designed to spur object detection research with a focus on diverse objects in the Wild, released by Megvii. It includes 365 categories, 600k images, 10 million bounding boxes. 
 
@@ -721,8 +744,6 @@ Table of Content
 
   
 
-
-
 ### Papers 
 
 The figure shows a development of object detection for natural images.
@@ -746,21 +767,6 @@ The figure shows a development of object detection for natural images.
 
 
 
-#### Notes
-
-- [Deep learning for object detection: performance table and paper list](https://github.com/hoya012/deep_learning_object_detection)
-
-- [The Path to Object Detection (Step One): The Storyline of Evaluation Metrics](https://mercurise.github.io/Object-Detection-Metrics-Storyline/) [[mmAP]](https://zhuanlan.zhihu.com/p/55575423)
-
-- [[Object Detection Note]](https://zhuanlan.zhihu.com/p/82491218)
-
-- [CVPR2019目标检测方法进展](https://mp.weixin.qq.com/s/mu_4kNGZuExxUK2JFTdDFw) 
-- [目标检测算法中检测框合并策略技术综述](https://zhuanlan.zhihu.com/p/48169867)
-- [自然场景下的文字检测: 从多方向迈向任意形状](https://zhuanlan.zhihu.com/p/68058851)
-- Anchor Review [[Page1]](https://zhuanlan.zhihu.com/p/63273342) [[Page2]](https://zhuanlan.zhihu.com/p/68291859?utm_source=wechat_timeline&utm_medium=social&utm_oi=34034784665600&from=timeline&isappinstalled=0)
-
-
-
 #### Review
 
 - Does Object Recognition Work for Everyone? arXiv2019.6
@@ -774,21 +780,22 @@ The figure shows a development of object detection for natural images.
 - [201908] Recent Advances in Object Detection in the Age of Deep Convolutional Neural Networks
 
 - [201908] Recent Advances in Deep Learning for Object Detection
+
 - [201905] Object Detection in 20 Years: A Survey [[Note1]](https://zhuanlan.zhihu.com/p/72917161) [[Note2]](https://zhuanlan.zhihu.com/p/73069250)
 
 - [**2019IJCV**] Deep Learning for Generic Object Detection: A Survey
 
 - [2019Acce] A Survey of Deep Learning-based Object Detection
 
-- [2019NeurIPSW] Benchmarking Robustness in Object Detection: Autonomous Driving when Winter is Coming, 2019 NeurIPS ML4AD 
-
-  [[PDF]](https://arxiv.org/pdf/1907.07484v1.pdf) [[Code&Data]](https://github.com/bethgelab/robust-detection-benchmark) [[Code for corrupt images]](https://github.com/bethgelab/imagecorruptions) [[AdaIN style transfer]](https://github.com/bethgelab/stylize-datasets)
+- [2019NIPSW] Benchmarking Robustness in Object Detection: Autonomous Driving when Winter is Coming [[PDF]](https://arxiv.org/pdf/1907.07484v1.pdf) [[Code&Data]](https://github.com/bethgelab/robust-detection-benchmark) [[Code for corrupt images]](https://github.com/bethgelab/imagecorruptions) [[AdaIN style transfer]](https://github.com/bethgelab/stylize-datasets)
 
 - [2019ICMLW] How much real data do we actually need: Analyzing object detection performance using synthetic and real data [[Note]](https://zhuanlan.zhihu.com/p/74537255)
 
 - [2018SPM] Advanced deep learning techniques for salient and category-specific object detection: a survey. IEEE Signal Processing Magazine
 
 - [**2018ECCV**] Modeling Visual Contesxt is Key to Augmenting Object Detection Datasets [[Code]](https://github.com/dvornikita/context_aug)
+
+- [Blog] [目标检测回归损失函数简介：SmoothL1/IoU/GIoU/DIoU/CIoU Loss](https://mp.weixin.qq.com/s/Mo4rinuiv9dHdj7CHesCvA)
 
   
 
@@ -804,11 +811,13 @@ Object detection categories can be seen as below:
 
 Others
 
+- SpineNet: Learning Scale-Permuted Backbone for Recognition and Localization. [arXiv201912](https://arxiv.org/abs/1912.05027) [[Note]](https://zhuanlan.zhihu.com/p/100590305)
 - Empirical Upper-bound in Object Detection and More, arXiv2019.11
 - Deformable Kernels: Adapting Effective Receptive Fields for Object Deformation, 201910
 - On the Importance of Visual Context for Data Augmentation in Scene Understanding, 201909
 - [PSIS] Data Augmentation for Object Detection via Progressive and Selective Instance-Switching, 201907 [[Code]](https://github.com/Hwang64/PSIS)
 - Making an Invisibility Cloak: Real World Adversarial Attacks on Object Detectors, 2019
+- [2020WACV] Generating Positive Bounding Boxes for Balanced Training of Object Detectors [[Code]](https://github.com/kemaloksuz/BoundingBoxGenerator)
 - [**2019ICCV**] [EFGRNet] Enriched feature guided refinement network for object detection [[github]](https://github.com/Ranchentx/EFGRNet)
 - [**2019ICCV**] Towards Interpretable Object Detection by Unfolding Latent Structures
 - [**2019ICCV**] Towards Adversarially Robust Object Detection [[Homepage]](https://sites.google.com/site/hczhang1/projects/adv_robust_obj_det)
@@ -826,7 +835,7 @@ Others
 ##### Module/backbone
 
 - EfficientDet: Scalable and Efficient Object Detection,201911arXiv
-- CSPNet: A New Backbone that can Enhance Learning Capability of CNN, 201911arXiv [[Code]](https://github.com/WongKinYiu/CrossStagePartialNetworks)
+- CSPNet: A New Backbone that can Enhance Learning Capability of CNN. [arXiv201911](https://arxiv.org/abs/1911.11929) [[Code]](https://github.com/WongKinYiu/CrossStagePartialNetworks)
 - Matrix Nets: A New Deep Architecture for Object Detection, 2019arXiv
 - CBNet: A Novel Composite Backbone Network Architecture for Object Detection, 201909arXiv [[github]](https://github.com/PKUbahuangliuhe/CBNet)
 - [**2019ICCV**] CARAFE: Content-Aware ReAssembly of FEatures [[github]](https://github.com/XiaLiPKU/CARAFE) [[Notes]](https://mp.weixin.qq.com/s/zYr83n_zUTJ6EzxfkzTh5g)
@@ -842,7 +851,7 @@ Others
 - Mixture-Model-based Bounding Box Density Estimation for Object Detection, arXiv201912 
 - IoU-balanced Loss Functions for Single-stage Object Detection, arXiv2019.8 
 - Softer-NMS: Rethinking Bounding Box Regression for Accurate Object Detection, arXiv201904 [[github]](https://github.com/yihui-he/softer-NMS)
-- [**2020AAAI**] Distance-IoU Loss: Faster and Better Learning for Bounding Box Regression [[github]](https://github.com/Zzh-tju/DIoU-darknet) [[Note]](https://mp.weixin.qq.com/s?__biz=MzUxNjcxMjQxNg==&mid=2247493985&idx=3&sn=23da3173b481d309903ec0371010d9f2&chksm=f9a19beeced612f81f94d22778481ffae16b25abf20973bf80917f9ff9b38b3f78ecd8237562&scene=21#wechat_redirect)
+- [**2020AAAI**] Distance-IoU Loss: Faster and Better Learning for Bounding Box Regression [[github]](https://github.com/Zzh-tju/DIoU-darknet) [[Note]](https://mp.weixin.qq.com/s/ytNXeEB34rTzoHWNQ5aHvA)
 - [**2019CVPR**] [KL-Loss] Bounding Box Regression with Uncertainty for Accurate Object Detection [[github]](https://github.com/yihui-he/KL-Loss)
 
 - [**2019CVPR**] Locating Objects Without Bounding Boxes [[github]](https://github.com/javiribera/locating-objects-without-bboxes)
@@ -881,15 +890,25 @@ Others
 
 > Proposal: sliding window/selective search/Edgebox -> RPN
 
+- Side-Aware Boundary Localization for More Precise Object Detection. [arXiv201912](https://arxiv.org/abs/1912.04260) [[Code]](https://github.com/open-mmlab/mmdetection)
+
+- MFPN: A Novel Mixture Feature Pyramid Network of Multiple Architectures for Object Detection. [arXiv201912](https://arxiv.org/abs/1912.09748)
+
 - Multiple Anchor Learning for Visual Object Detection, arXiv201912
+
 - Analysis and a Solution of Momentarily Missed Detection for Anchor-based Object Detectors, Oct 2019
+
 - Libra R-CNN: Towards Balanced Learning for Object Detection, 2019 [IoU-balanced sampling]
-- [PANet] PosNeg-Balanced Anchors with Aligned Features for Single-Shot Object Detection, 2019
+
+- [**PANet**] PosNeg-Balanced Anchors with Aligned Features for Single-Shot Object Detection, 2019
+
 - Impoved RPN for Single Targets Detection based on the Anchor Mask Net, arXiv2019.6
+
 - Double-Head RCNN: Rethinking Classification and Localization for Object Detection, arXiv2019.5
+
 - Anchor Box Optimization for Object Detection, 201812
+
 - [2019BMVC] Rethinking Classification and Localization for Cascade R-CNN [[Note]](https://zhuanlan.zhihu.com/p/80222547)
-- 
 
 - [**2019NeurIPS**] Cascade RPN: Delving into High-Quality Region Proposal Network with Adaptive Convolution [[github]](https://github.com/thangvubk/Cascade-RPN)
 
@@ -929,7 +948,7 @@ Others
 
 - [**2015CVPR/2017PAMI**] DeepID-Net: Deformable Deep Convolutional Neural Networks for Object Detection
 
-- [**2015NIPS/2017PAMI**] Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
+- [**2015NIPS/2017PAMI**] Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks [[Note]](https://zhuanlan.zhihu.com/p/31426458)
 
 - [**2014ECCV/2015PAMI**] [**SPP**] Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition
 
@@ -945,8 +964,6 @@ Others
 
 - [**2009PAMI**] [**DPM**] Object Detection with Discriminatively Trained Part Based Models
 
-- 
-
 - **Secondary**
 
 - [2018] Auto-Context R-CNN, 2018 (Tianfu Wu, rejected by ECCV18)
@@ -957,7 +974,11 @@ Others
 
 > SSD -> RefineDet -> Guided anchoring -> AlignDet
 
+- IoU-aware Single-stage Object Detector for Accurate Localization. [arXive201912](https://arxiv.org/abs/1912.05992)
+
 - Residual Bi-Fusion Feature Pyramid Network for Accurate Single-shot Object Detection, arXiv2019.11
+
+- RefineDetLite: A Lightweight One-stage Object Detection Framework for CPU-only Devices. [arXiv201911](https://arxiv.org/abs/1911.08855)
 
 - IoU-balanced Loss Functions for Single-stage Object Detection, arXiv2019.8 
 
@@ -987,7 +1008,7 @@ Others
 
 - [**2018CVPR**] [**RefineDet**] Single-Shot Refinement Neural Network for Object Detection [[github]](https://github.com/sfzhang15/RefineDet)
 
-- [**2017ICCV**] [**RetinaNet**] Focal Loss for Dense Object Detection [[Note]](https://zhuanlan.zhihu.com/p/32423092)
+- [**2017ICCV**] [**RetinaNet**] Focal Loss for Dense Object Detection [[Note]](https://zhuanlan.zhihu.com/p/32423092) [[Note2]](https://mp.weixin.qq.com/s/F7WvdyEwWCwGrxjXNt1kpw)
 
 - [**2017CVPR**] RON: Reverse Connection with Objectness Prior Networks for Object Detection
 
@@ -999,7 +1020,7 @@ Others
 
   > [**2017CVPR**] [YOLOv2] YOLO9000: Better, Faster, Stronger
   >
-  > [2019] YOLOv3: An Incremental Improvement [[Note]](https://mp.weixin.qq.com/s/BohClU-cWo3WBp7Y-VBG3A)
+  > [2019] YOLOv3: An Incremental Improvement, [arXive201804](https://arxiv.org/abs/1804.02767) [[Note]](https://mp.weixin.qq.com/s/BohClU-cWo3WBp7Y-VBG3A) [[Proj]](https://pjreddie.com/darknet/yolo/) [[Code]](https://github.com/pjreddie/darknet) [[Code2]](https://github.com/AlexeyAB/darknet) [[BatchNorm2d-issue]](https://mp.weixin.qq.com/s/7MlZh219_bBqIg20L8kaaQ)
 
 
 
@@ -1017,10 +1038,12 @@ Others
 
 True anchor free
 
-- CornerNet-Lite: Efficient Keypoint Based Object Detection, 2019 [[github]](https://github.com/princeton-vl/CornerNet-Lite)
-- [**ExtremeNet**] Bottom-up Object Detection by Grouping Extreme and Center Points, 2019 [[github]](https://github.com/xingyizhou/ExtremeNet)
+- Dense RepPoints: Representing Visual Objects with Dense Point Sets. [arXiv201912](https://arxiv.org/abs/1912.11473)
+
+- CornerNet-Lite: Efficient Keypoint Based Object Detection, 2019 [[Code]](https://github.com/princeton-vl/CornerNet-Lite)
 - [**2019ICCV**] RepPoints: Point Set Representation for Object Detection
-- [**2019ICCV**] CenterNet: Keypoint Triplets for Object Detection [[github]](https://github.com/Duankaiwen/CenterNet)
+- [**2019ICCV**] CenterNet: Keypoint Triplets for Object Detection [[Code]](https://github.com/Duankaiwen/CenterNet)
+- [2019CVPR] [**ExtremeNet**] Bottom-up Object Detection by Grouping Extreme and Center Points [[Code]](https://github.com/xingyizhou/ExtremeNet)
 - [**2018ECCV**] CornerNet: Detecting Objects as Paired Keypoints
 
 False-anchor-free
@@ -1060,18 +1083,24 @@ False-anchor-free
 
 
 
-##### *Small and Dense Object* 
+##### *Small/Dense Object* 
 
 >  [[Page1]](https://blog.csdn.net/e01528/article/details/88322172) [[Page2]](https://max.book118.com/html/2019/0702/5042042032002102.shtm) [[Page3]](https://learning.snssdk.com/feoffline/toutiao_wallet_bundles/toutiao_learning_wap/online/article.html?item_id=6677873215601115652&app_name=news_article&from=singlemessage)
 
+- Benchmark for Generic Product Detection: A strong baseline for Dense Object Detection. [arXiv201912](https://arxiv.org/abs/1912.09476) [[Code]](https://github.com/ParallelDots/generic-sku-detection-benchmark)
+
 - IPG-Net: Image Pyramid Guidance Network for Object Detection, arXiv201912
+
 - ScarfNet: Multi-scale Features with Deeply Fused and Redistributed Semantics for Enhanced Object Detection, 2019.8
 
 - Needles in Haystacks: On Classifying Tiny Objects in Large Images, 2019.8 [[github]](https://github.com/facebookresearch/Needles-in-Haystacks)
+
 - A Comparison of Super-Resolution and Nearest Neighbors Interpolation Applied to Object Detection on Satellite Data, arXiv2019.7
+
 - EXTD: Extremely Tiny Face Detector via Iterative Filter Reuse, 2019.6 [[github]](https://github.com/SeungyounShin/EXTD)
 
 - Fully Convolutional Deep Neural Networks for Persistent Multi-Frame Multi-Object Detection in Wide Area Aerial Videos, arXiv2017.4
+
 - LapNet : Automatic Balanced Loss and Optimal Assignment for Real-Time Dense Object Detection, 2019
 
 - [HRNet] High-Resolution Representation Learning for Object Detection, 2019 [[Homepage]](https://jingdongwang2017.github.io/Projects/HRNet/ObjectDetection.html) [[github]](https://github.com/HRNet/HRNet-Object-Detection) 
@@ -1082,33 +1111,46 @@ False-anchor-free
 
 - Augmentation for small object detection, 2019
 
-- 
+- [2020WACV] Scale Match for Tiny Person Detection. 
+
+- [2019TIP] Combining Faster R-CNN and Model-Driven Clustering for Elongated Object Detection
+
 - [**2019ICCV**] TensorMask: A Foundation for Dense Object Segmentation
+
 - [**2019ICCV**] CapsuleVOS: Semi-Supervised Video Object Segmentation Using Capsule Routing (Zoom module) [[Code]](https://github.com/KevinDuarte/CapsuleVOS)
 
 - [**2019ICCV**] POD: Practical Object Detection with Scale-Sensitive Network
 
-- [**2019ICCV**] R3Det: Refined Single-Stage Detector with Feature Refinement for Rotating Object [[github]](https://github.com/DetectionTeamUCAS/RetinaNet_Tensorflow_Rotation) [[Note]](https://wemp.app/posts/1f83fd5b-fb60-4ee5-bbc7-8f1ba50dc503) [[Note2]](https://mp.weixin.qq.com/s?__biz=MzU3NjU1ODQ3OA==&mid=2247484265&idx=1&sn=0ea6a20044e9c50b2b7856bc104d3803&chksm=fd134788ca64ce9eef76e853aa6c421df4f798d5aa6d44448b562a0e15f224b69832993bdd77&mpshare=1&scene=23&srcid=1125iCijSWShcZrwXDtIIuIy&sharer_sharetime=1574684530480&sharer_shareid=d3d8827bce826478944c5e3a9f67ed4b%23rd)
+- [**2019ICCV**] R3Det: Refined Single-Stage Detector with Feature Refinement for Rotating Object [[Code]](https://github.com/Thinklab-SJTU/R3Det_Tensorflow) [[github]](https://github.com/DetectionTeamUCAS/RetinaNet_Tensorflow_Rotation) [[Note]](https://wemp.app/posts/1f83fd5b-fb60-4ee5-bbc7-8f1ba50dc503) [[Note2]](https://mp.weixin.qq.com/s?__biz=MzU3NjU1ODQ3OA==&mid=2247484265&idx=1&sn=0ea6a20044e9c50b2b7856bc104d3803&chksm=fd134788ca64ce9eef76e853aa6c421df4f798d5aa6d44448b562a0e15f224b69832993bdd77&mpshare=1&scene=23&srcid=1125iCijSWShcZrwXDtIIuIy&sharer_sharetime=1574684530480&sharer_shareid=d3d8827bce826478944c5e3a9f67ed4b%23rd)
 
 - [**2019CVPR**] Adaptive NMS: Refining Pedestrian Detection in a Crowd
+
 - [**2019CVPR**] Precise Detection in Densely Packed Scenes [[github]](https://github.com/eg4000/SKU110K_CVPR19)
+
 - [**2019CVPR**] ScratchDet: Exploring to Train Single-Shot Object Detectors from Scratch [[github]](https://github.com/KimSoybean/ScratchDet)
+
 - [**2019CVPRW**] Dense and Small Object Detection in UAV Vision Based on Cascade Network
+
 - [**2019Acce**] A simple and efficient network for small target detection
+
 - [**2019BMVC**] Efficient Coarse-to-Fine Non-Local Module for the Detection of Small Objects
+
 - [**2018CVPR**] ClusterNet: Detecting Small Objects in Large Scenes by Exploiting Spatio-Temporal Information [[supp]](https://www.crcv.ucf.edu/papers/cvpr2018/3460-supp.pdf)
+
 - [**2018CVPR**] Finding Tiny Faces in the Wild with Generative Adversarial Network, Oral [[Code]]( https://github.com/EthanGuan/Finding-Tiny-Faces-with-GAN)
 
 - [**2018BMVC**] STDnet: A ConvNet for Small Target Detection
 
 - [**2017CVPR**] Perceptual Generative Adversarial Networks for Small Object Detection
+
 - [**2016CVPR**] Adaptive Object Detection Using Adjacency and Zoom Prediction
 
-- 
 - **Secondary:**
 
 - [2019Conf] TrackNet: A Deep Learning Network for Tracking High-speed and Tiny Objects in Sports Applications [[Homepage]](https://nol.cs.nctu.edu.tw/ndo3je6av9/) [[Homepage2]](https://inoliao.github.io/CoachAI/) [[Code]](https://nol.cs.nctu.edu.tw:234/iSport/TrackNet/)
+
 - [2019TGRS] Detecting Small Objects in Urban Settings Using SlimNet Model
+
 - [2019PRL] Beyond context: Exploring semantic similarity for small object detection in crowded scenes
 
 
@@ -1133,7 +1175,6 @@ False-anchor-free
 - DR Loss: Improving Object Detection by Distributional Ranking, 201907 [[Notes]](https://mp.weixin.qq.com/s/Z2YpEFoPUVpnFC-GBYxcQg)
 - C-RPNs: Promoting Object Detection in real world via a Cascade Structure of Region Proposal Networks, 2019 [hard example mining]
 
-- 
 - [**2020PAMI**] Imbalance Problems in Object Detection: A Review, 201908
 - [2019] [PISA] Prime Sample Attention in Object Detection, 201909 [[Note]](https://www.bilibili.com/read/cv2762041/)
 
@@ -1145,7 +1186,6 @@ False-anchor-free
 - [**2017CVPR**] A-Fast-RCNN: Hard Positive Generation via Adversary for Object Detection [[Code]](https://github.com/xiaolonw/adversarial-frcnn)
 - [**2016CVPR**] [OHEM] Training region-based object detectors with online hard example mining
 
-- 
 - **Long-Tail**
 
 - [**2019CVPR**] Large-Scale Long-Tailed Recognition in an Open World, Oral [[Homepage]](https://liuziwei7.github.io/projects/LongTail.html)
@@ -1157,16 +1197,14 @@ False-anchor-free
 ##### *Real-Time Detection*
 
 - YOLO Nano: a Highly Compact You Only Look Once Convolutional Neural Network for Object Detection, 201910
-- [**2020AAAI**] Training-Time-Friendly Network for Real-Time Object Detection [[github]](https://github.com/ZJULearning/ttfnet)
-- [**2019ICCV**] ThunderNet: Towards Real-time Generic Object Detection
+- [**2020AAAI**] Training-Time-Friendly Network for Real-Time Object Detection [[Code]](https://github.com/ZJULearning/ttfnet)
+- [**2019ICCV**] ThunderNet: Towards Real-time Generic Object Detection [[Code]](https://github.com/ouyanghuiyu/Thundernet_Pytorch)
 - [201811] YOLO-LITE: A Real-Time Object Detection Algorithm Optimized for Non-GPU Computers, 2018 [[github]](https://github.com/reu2018DL/YOLO-LITE) [[Proj]](https://reu2018dl.github.io/)
 - Tiny YOLOv1, v2, v3
 
 
 
-
-
-#### Instance Segmentation
+#### Instance Seg
 
 ##### Amodal IS
 
@@ -1178,21 +1216,37 @@ False-anchor-free
 
 ##### InstanceSeg
 
+- Deep Snake for Real-Time Instance Segmentation. [arXiv202001](https://arxiv.org/abs/2001.01629) [[Code]](https://github.com/zju3dv/snake)
+
 - PolyTransform: Deep Polygon Transformer for Instance Segmentation, arXiv2019.12
+
 - EmbedMask: Embedding Coupling for One-stage Instance Segmentation, arXiv2019.12 [[Code]](https://github.com/yinghdb/EmbedMask)
+
+- SOLO: Segmenting Objects by Locations. [arXive201912](https://arxiv.org/abs/1912.04488)
+
 - CenterMask: Real-Time Anchor-Free Instance Segmentation, 201911 [[Code]](https://github.com/youngwanLEE/CenterMask)
+
 - [MR R-CNN] Shape-aware Feature Extraction for Instance Segmentation, 201911 
+
 - PolarMask: Single Shot Instance Segmentation with Polar Representation, 201910 [[Code]](https://github.com/xieenze/PolarMask) [[Note]](https://zhuanlan.zhihu.com/p/84890413)
+
 - Instance Segmentation with Point Supervision, arXiv201906
-- 
+
+- [2020AAAI] RDSNet: A New Deep Architecture for Reciprocal Object Detection and Instance Segmentation [[Code]](https://github.com/wangsr126/RDSNet)
+
 - [**2020AAAI**] Object-Guided Instance Segmentation for Biological Images
+
+- [2019TIP] Mask SSD: An Effective Single-Stage Approach to Object Instance Segmentation
+
 - [**2019ICCV**] IMP: Instance Mask Projection for High Accuracy Semantic Segmentation of Things
+
 - [**2019ICCV**] Video instance segmentation [[Code]](https://github.com/youtubevos/MaskTrackRCNN)
+
 - [**2019ICCV**] SSAP: Single-Shot Instance Segmentation With Affinity Pyramid
 
 - [**2019ICCV**] Meta R-CNN : Towards General Solver for Instance-level Low-shot Learning [[Homepage]](https://yanxp.github.io/metarcnn.html) [[github]](https://github.com/yanxp/MetaR-CNN)
 
-- [**2019ICCV**] AdaptIS: Adaptive Instance Selection Network [[Code]](https://github.com/saic-vul/adaptis)
+- [**2019ICCV**] **AdaptIS**: Adaptive Instance Selection Network [[Code]](https://github.com/saic-vul/adaptis)
 
 - [**2019ICCV**] Explicit Shape Encoding for Real-Time Instance Segmentation, ICCV2019 [[github]](https://github.com/WenqiangX/ese_seg)
 
@@ -1200,7 +1254,7 @@ False-anchor-free
 
 - [**2019ICCV**] YOLACT: Real-time Instance Segmentation [[Code]](https://github.com/dbolya/yolact)
 
-  > YOLACT++: Better Real-time Instance Segmentation, 201912
+  > YOLACT++: Better Real-time Instance Segmentation. [arXive201912](https://arxiv.org/abs/1912.06218)
 
 - [**2019CVPR**] DeepCO^3 : Deep Instance Co-segmentation by Co-peak Search and Co-saliency Detection [[Code]](https://github.com/KuangJuiHsu/DeepCO3)
 
@@ -1215,6 +1269,10 @@ False-anchor-free
 - [**2019CVPR**] Hybrid Task Cascade for Instance Segmentation [[Code]](https://github.com/open-mmlab/mmdetection)
 
 - [2019BMVC] Where are the Masks: Instance Segmentation with Image-level Supervision [[Code]](https://github.com/ElementAI/wise_ils)
+
+- [2019MICCAI] Multi-scale Cell Instance Segmentation with Keypoint Graph based Bounding Boxes [[Code]](https://github.com/yijingru/KG_Instance_Segmentation)
+
+- [**2018CVPR**] [**PANet**] Path aggregation network for instance segmentation
 
 - [**2018CVPR**] MaskLab: Instance Segmentation by Refining Object Detection with Semantic and Direction Features
 
@@ -1244,13 +1302,11 @@ False-anchor-free
 
 - [**2015NIPS**] [DeepMask] Learning to Segment Object Candidates
 
-- 
 - **Rotated IS:**
 
 - Oriented Boxes for Accurate Instance Segmentation, arXiv201911
+
 - Rotated Mask R-CNN: From Bounding Boxes to Rotated Bounding Boxes, 2019 [[Code]](https://github.com/mrlooi/rotated_maskrcnn)
-
-
 
 
 
@@ -1271,48 +1327,52 @@ False-anchor-free
 
 
 
-
-
 #### 3D ObDet
 
 > An introduction to 3D object detection [[Page1]](https://mp.weixin.qq.com/s/G8ahzUEHmUybjR1uYC203w) [[Page2]](https://mp.weixin.qq.com/s/MfgQB9qKDZfmV7qc2b4BCg)
 
-- Class-balanced Grouping and Sampling for Point Cloud 3D Object Detection, 201908
-- Part-A^2 Net: 3D Part-Aware and Aggregation Neural Network for Object Detection from Point Cloud, arXiv201907 [[ProjPage]](https://sshaoshuai.github.io/)
+- Class-balanced Grouping and Sampling for Point Cloud 3D Object Detection, arXiv201908
+- Part-A^2 Net: 3D Part-Aware and Aggregation Neural Network for Object Detection from Point Cloud, arXiv201907 [[Proj]](https://sshaoshuai.github.io/)
 - Monocular 3D Object Detection and Box Fitting Trained End-to-End Using Intersection-over-Union Loss, arXiv201906
-- 
+- Monocular 3D Object Detection via Geometric Reasoning on Keypoints, arXiv201905
 - [**2020AAAI**] PI-RCNN: An Efficient Multi-sensor 3D Object Detector with Point-based Attentive Cont-conv Fusion Module
-- [**2019NeurIPS**] Patch Refinement - Localized 3D Object Detection
-- [**2019ICCV**] Disentangling Monocular 3D Object Detection
+- [**2019NNIPS**] Patch Refinement - Localized 3D Object Detection
+- [**2019ICCV**] Mesh R-CNN [[Code]](https://github.com/facebookresearch/meshrcnn)
+- [**2019ICCV**] Accurate Monocular 3D Object Detection via Color-Embedded 3D Reconstruction for Autonomous Driving
+- [**2019ICCV**] [**MonoDis**] Disentangling Monocular 3D Object Detection [[Proj]](https://research.mapillary.com/publication/MonoDIS/)
 - [**2019ICCV**] M3D-RPN: Monocular 3D Region Proposal Network for Object Detection [[github]](https://github.com/garrickbrazil/M3D-RPN)
 - [**2019ICCV**] Deep Hough Voting for 3D Object Detection in Point Clouds [FAIR-KaimingHe] [[github]](https://github.com/facebookresearch/votenet)
 - [**2019ICCV**] Fast Point R-CNN
 - [**2019ICCV**] Joint Monocular 3D Vehicle Detection and Tracking [[github]](https://github.com/ucbdrive/3d-vehicle-tracking)
-- [**2019CVPR**] Stereo R-CNN based 3D Object Detection for Autonomous Driving [[github]](https://github.com/HKUST-Aerial Robotics/Stereo-RCNN)
+- [**2019CVPR**] Stereo R-CNN based 3D Object Detection for Autonomous Driving [[github]](https://github.com/HKUST-Aerial Robotics/Stereo-RCNN) [[Note]](https://mp.weixin.qq.com/s/6qDpVD5ho8kp8HHPq0ODBg)
 - [**2019CVPR**] Monocular 3D Object Detection Leveraging Accurate Proposals and Shape Reconstruction
 - [**2019CVPR**] Deep Fitting Degree Scoring Network for Monocular 3D Object Detection
 - [**2019CVPR**] PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud [[Code]](https://github.com/sshaoshuai/PointRCNN) 
 - [**2019CVPR**] Triangulation Learning Network: From Monocular to Stereo 3D Object Detection
 - [**2019CVPR**] PointRCNN: 3D Object Proposal Generation and Detection From Point Cloud [[Code]](https://github.com/sshaoshuai/PointRCNN)
 - [**2019BMVC**] Orthographic Feature Transform for Monocular 3D Object Detection [[Code]](https://github.com/tom-roddick/oft)
-- [**2019AAAI**] Mono3D++: Monocular 3D Vehicle Detection with Two-Scale 3D Hypotheses and Task Priors
-- [**2019AAAI**] MonoGRNet: A Geometric Reasoning Network for Monocular 3D Object Localization [[Code]](https://github.com/Zengyi-Qin/MonoGRNet)
+- [**2019AAAI**] **Mono3D++**: Monocular 3D Vehicle Detection with Two-Scale 3D Hypotheses and Task Priors
+- [**2019AAAI**] **MonoGRNet**: A Geometric Reasoning Network for Monocular 3D Object Localization [[Code]](https://github.com/Zengyi-Qin/MonoGRNet)
+- [**2018CVPR**] Multi-Level Fusion based 3D Object Detection from Monocular Images
+- [**2018CVPR**] **VoxelNet**: End-to-End Learning for Point Cloud Based 3D Object Detection [[Code1]](https://github.com/tsinghua-rll/VoxelNet-tensorflow) [[Code2]](https://github.com/qianguih/voxelnet)
 - [**2018ECCV**] 3D Bounding Boxes for Road Vehicles: A One-Stage, Localization Prioritized Approach using Single Monocular Images
-- [**2018CVPR**] Multi-Level Fusion based 3D Object Detection from Monocular Images, CVPR, 2018
-- [**2018TRO**] CubeSLAM: Monocular 3D Object SLAM,
+- [**2018TRO**] CubeSLAM: Monocular 3D Object SLAM
 - [**2017CVPR**] 3D Bounding Box Estimation Using Deep Learning and Geometry
 - [**2016CVPR**] Monocular 3D Object Detection for Autonomous Driving
 - [**2015CVPR**] Joint SFM and Detection Cues for Monocular 3D Localization in Road Scenes
+- [**2015IROS**] **VoxNet**: A 3D Convolutional Neural Network for real-time object recognition [[Proj]](http://dimatura.net/research/voxnet/) [[Code]](https://github.com/dimatura/voxnet) [[Code2]](https://github.com/VincentCheungM/voxnet_lidar)
 - [**2014CVPR**] Are Cars Just 3D Boxes? – Jointly Estimating the 3D Shape of Multiple Objects
 - [**2012CVPR**] Monocular Visual Scene Understanding: Understanding Multi-Object Traffic Scenes
-- **3D Instance Segmentation**:
+
+**3D Instance Segmentation**
+
+- [**2019NIPS**] [**3D-BoNet**] Learning Object Bounding Boxes for 3D Instance Segmentation on Point Clouds (Spotlight) [[Code]](https://github.com/Yang7879/3D-BoNet)
 - [**2019ICCV**] 3D Instance Segmentation via Multi-Task Metric Learning
-- [2019CVPR] SPN: Generative Shape Proposal Network for 3D Instance Segmentation in Point Cloud
-- 
-- **Secondary:**
+- [**2019CVPR**] SPN: Generative Shape Proposal Network for 3D Instance Segmentation in Point Cloud
+
+**Secondary:**
+
 - [2017Thesis] Vehicle Detection and Pose Estimation for Autonomous Driving (Thesis) [[Code]](https://github.com/libornovax/master_thesis_code)
-
-
 
 
 
@@ -1334,8 +1394,6 @@ False-anchor-free
 
 
 
-
-
 #### Other: Traffic/Fruit/Shadow
 
 > Traffic Light Recognition — A Visual Guide [[Page]](https://medium.com/@kenan.r.alkiek/https-medium-com-kenan-r-alkiek-traffic-light-recognition-505d6ab913b1)
@@ -1344,11 +1402,13 @@ False-anchor-free
 
 > [ShadowDetection_PWC](https://paperswithcode.com/task/shadow-detection/codeless)
 
-- Revisiting Shadow Detection: A New Benchmark Dataset for Complex World, 201911
+- Revisiting Shadow Detection: A New Benchmark Dataset for Complex World, arXiv201911
 
 - [LISA] Instance Shadow Detection, 2019 [Dataset: SOBA](https://xw-hu.github.io/)
 
-- DeepMask: an algorithm for cloud and cloud shadow detection in optical satellite remote sensing images using deep residual network, 201911
+- DeepMask: an algorithm for cloud and cloud shadow detection in optical satellite remote sensing images using deep residual network, arXiv201911
+
+- [2020AAAI] **RIS-GAN**: Explore Residual and Illumination with Generative Adversarial Networks for Shadow Removal 
 
 - [**2019PAMI**] Direction-Aware Spatial Context Features for Shadow Detection and Removal [[Code]](https://github.com/xw-hu/DSC)
 
@@ -1382,35 +1442,47 @@ False-anchor-free
 
 
 
-
-
 #### Text Inspiration
 
 > Repo: [awesome-deep-text-detection-recognition](https://github.com/hwalsuklee/awesome-deep-text-detection-recognition) 
 >
 > Repo: [Scene-Text-Detection](https://github.com/HCIILAB/Scene-Text-Detection)
 
+- STD++: A Semantic-based Arbitrarily-Oriented Scene Text Detector, 2019 [[Code]](https://github.com/opconty/keras_std_plus_plus/tree/master)
+
+- STD: A Semantic-based Scene Text Detector, 2019 [[Code]](https://github.com/opconty/keras_std)
+
 - R2CNN: Rotational Region CNN for Orientation Robust Scene Text Detection, 201706 [[ReImplement]](https://github.com/DetectionTeamUCAS/R2CNN_Faster-RCNN_Tensorflow) [[ReImplement2]](https://github.com/yangxue0827/R2CNN_FPN_Tensorflow)
+
 - [**2020AAAI**] All you need is boundary: toward arbitrary-shaped text spotting
+
 - [**2019TIP**] TextField: Learning A Deep Direction Field for Irregular Scene Text Detection [Y.-C. Xu] [[Code]](https://github.com/YukangWang/TextField)
+
 - [2019PR] SegLink++: Detecting Dense and Arbitrary-shaped Scene Text by Instance-aware Component Grouping 
+
 - [**2019ICCV**] [PAN/PSENet2] Efficient and Accurate Arbitrary-Shaped Text Detection with Pixel Aggregation Network  [[Note]](https://zhuanlan.zhihu.com/p/79111059)
+
 - [**2019ICCV**] Symmetry-constrained Rectification Network for Scene Text Recognition
+
 - [**2019ICCV**] Towards Unconstrained End-to-End Text Spotting
+
 - [**2019CVPR**] Arbitrary Shape Scene Text Detection with Adaptive Text Region Representation 
 
 - [**2019CVPR**] [PSENet] Shape Robust Text Detection With Progressive Scale Expansion Network [[github]](https://github.com/whai362/PSENet)
+
 - [**2019CVPR**] Learning Shape-Aware Embedding for Scene Text Detection
 
-- [**2019CVPR**]  Rotation-Sensitive Regression for Oriented Scene Text Detection
+- [**2019CVPR**] Rotation-Sensitive Regression for Oriented Scene Text Detection
+
 - [**2019CVPR**] Geometry-Aware Scene Text Detection with Instance Transformation Network
-- [**2019CVPR**] AON: Towards Arbitrarily-Oriented Text Recognition [[github]](https://github.com/huizhang0110/AON)
+
+- [**2019CVPR**] AON: Towards Arbitrarily-Oriented Text Recognition [[Code]](https://github.com/huizhang0110/AON)
 
 - [**2018CVPR**] Multi-Oriented Scene Text Detection via Corner Localization and Region Segmentation
 
 - [**2018TIP**] TextBoxes++: A Single-Shot Oriented Scene Text Detector [[Code]](https://github.com/MhLiao/TextBoxes_plusplus)
 
-  > [2017AAAI] TextBoxes: A Fast Text Detector with a Single Deep Neural Network
+  [2017AAAI] TextBoxes: A Fast Text Detector with a Single Deep Neural Network
 
 - [2018TMM] Arbitrary-Oriented Scene Text Detection via Rotation Proposals [[Re-Code]](https://github.com/mjq11302010044/RRPN)
 
@@ -1422,29 +1494,10 @@ False-anchor-free
 
 - [**2017CVPR**] Multi-scale FCN with Cascaded Instance Aware Segmentation for Arbitrary Oriented Word Spotting in the Wild
 
+- [2017CVPR] EAST: An Efficient and Accurate Scene Text Detector
+
 - [**2016CVPR**] Multi-oriented text detection with fully convolutional networks
 
 - [**2014TIP**] A Unified Framework for Multi-Oriented Text Detection and Recognition
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
