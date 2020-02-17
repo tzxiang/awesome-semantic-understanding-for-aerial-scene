@@ -805,7 +805,7 @@ Object detection categories can be seen as below:
 
 ![img](Imgs/one-two-stage.png)
 
-<font size=2>Picture from DeepLearning-500-questions: https://github.com/scutan90/DeepLearning-500-questions</font>
+<font size=2>Picture from [DeepLearning-500-questions](https://github.com/scutan90/DeepLearning-500-questions)</font>
 
 
 
