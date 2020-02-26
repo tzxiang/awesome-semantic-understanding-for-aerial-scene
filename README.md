@@ -570,7 +570,8 @@ A curated list of awesome resources for semantic understanding of aerial scene, 
 
 #### Building Extraction
 
-- MAP-Net: Multi Attending Path Neural Network for Building Footprint Extraction from Remote Sensed Imagery, 2019
+- MAP-Net: Multi Attending Path Neural Network for Building Footprint Extraction from Remote Sensed Imagery. [arXiv201910](https://arxiv.org/abs/1910.12060) [Code](https://github.com/lehaifeng/MAPNet)
+- [2020ISPRS] Building segmentation through a gated graph convolutional neural network with deep structured feature embedding
 - [**2019CVPR**] DARNet: Deep Active Ray Network for Building Segmentation
 - [**2019AAAI**] Multi³Net: Segmenting Flooded Buildings via Fusion of Multiresolution, Multisensor, and Multitemporal Satellite Imagery
 - [2019TGRS] Towards automatic building polygon delineation from aerial images using CNN and regularization
