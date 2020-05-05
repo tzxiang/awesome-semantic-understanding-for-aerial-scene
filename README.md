@@ -385,21 +385,29 @@ A curated list of awesome resources for semantic understanding of aerial scene, 
 
 ### Review
 
-- [**2019GRSM**] Mini-Unmanned Aerial Vehicle-Based Remote Sensing: Techniques, applications, and prospects
+- [**2019GRSM**] Mini-Unmanned Aerial Vehicle-Based Remote Sensing: Techniques, applications, and prospects [[PDF]](https://tzxiang.github.io/papers/GRSM2019MiniUAVRS.pdf)
 
 - [2019JSTARS] EuroSAT: A Novel Dataset and Deep Learning Benchmark for Land Use and Land Cover Classification
+
+- [2019RS] Unmanned Aerial Vehicle for Remote Sensing Applications - A Review [[PDF]](https://www.mdpi.com/2072-4292/11/12/1443)
 
 - [**2018CVPR**] DOTA: A Large-scale Dataset for Object Detection in Aerial Images
 
 - [**2018ISPRSJ**] PatternNet: A benchmark dataset for performance evaluation of remote sensing image retrieval [[PatternNet Dataset]](https://sites.google.com/view/zhouwx/dataset)
 
-- [2017PIEEE] Remote Sensing Image Scene Classification: Benchmark and State of the Art, Proceedings of the IEEE [Gong Cheng] [NWPU-RESISC45]
-
 - [2017] RSI-CB: A Large Scale Remote Sensing Image Classification Benchmark via Crowdsource Data, arXiv2017.6 [[RSI-CB Dateset]](https://github.com/lehaifeng/RSI-CB)
 
-- [2017TGRS] AID: A Benchmark Data Set for Performance Evaluation of Aerial Scene Classification
-
 - [2019JIG] 卫星遥感及图像处理平台发展 [[PDF]](http://www.cjig.cn/html/jig/2019/12/20191203.htm#materials_and_methodss2-1)
+
+  
+
+- Scene Uderstanding
+
+- [2020arXiv] Remote Sensing Image Scene Classification Meets Deep Learning: Challenges, Methods, Benchmarks, and Opportunities [[arXiv]](https://arxiv.org/abs/2005.01094)
+
+- [2017PIEEE] Remote Sensing Image Scene Classification: Benchmark and State of the Art, Proceedings of the IEEE [Gong Cheng] [NWPU-RESISC45]
+
+- [2017TGRS] AID: A Benchmark Data Set for Performance Evaluation of Aerial Scene Classification
 
   
 
