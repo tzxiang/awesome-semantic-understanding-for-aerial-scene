@@ -70,11 +70,6 @@ A curated list of awesome resources for semantic understanding of aerial scene, 
 - 吴一戎: 遥感与智能-AI赋能遥感技术的思考 [[Page]](https://mp.weixin.qq.com/s/pNZzs4udjpGDugZOGxWJdw)
 - [Report] 胡翔云：遥感影像典型要素的智能解译 [[Slides]](/Docs/遥感影像典型要素的智能解译.pdf)
 
-[//]: # "这是注释, 不会显示"
-[//]: <> "这是注释, 不会显示"
-[comment]: <> "这是注释, 不会显示"
-[^_^]: (这是注释,不会显示)
-<!--这些是注释文本，不会显示-->
 
 ## Libraries
 
