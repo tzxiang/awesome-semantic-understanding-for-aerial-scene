@@ -1,3 +1,11 @@
+
+[//]: # "这是注释, 不会显示"
+[//]: <> "这是注释, 不会显示"
+[comment]: <> "这是注释, 不会显示"
+[^_^]: (这是注释,不会显示)
+<!--这些是注释文本，不会显示-->
+
+
 # awesome-semantic-understanding-for-aerial-scene 
 
 <!-- [`awesome.re`](https://awesome.re/) -->
