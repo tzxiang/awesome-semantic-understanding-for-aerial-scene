@@ -4,25 +4,9 @@
 
 A curated list of awesome resources for semantic understanding of aerial scene,  e.g. tutorials, papers, books, datasets, libraries and software.  inspired by [awesome-php](https://github.com/ziadoz/awesome-php).  [![Awesome](https://camo.githubusercontent.com/13c4e50d88df7178ae1882a203ed57b641674f94/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667)](https://github.com/sindresorhus/awesome)
 
-
+❗ An up-to-date paper list for obejct detection in aerial images can also be found [here](https://github.com/visionxiang/awesome-object-detection-in-aerial-images).
 
 **Table of Content**
-
-- [Tutorials](#Tutorials)
-- [Libraries](#Libraries)
-- [Datasets](#Datasets)
-
-- [Papers for Aerial Scene](#Papers-for-Aerial-Scene)
-  - [Reviews](#Reviews)
-  - [Object Detection (RS)](#Object-Detection-RS)
-  - [Typical Element Extraction](#Typical-Element-Extraction)
-  - [Semantic Segmentation](#Semantic-Segmentation)
-  - [Object Tracking](#Object-Tracking)
-  - [Scene Understanding/Change Detection](#Scene-Understanding-Change-Detection)
-  - [Aerial Reconstrcution](#Aerial-Reconstrcution)
-  - [Generation](#Generation)
-  - [Enhancement](#Enhancement)
-  - [RS Application](#RS-Application)
 
 - [Tutorials](#Tutorials)
 - [Libraries](#Libraries)
@@ -43,13 +27,9 @@ A curated list of awesome resources for semantic understanding of aerial scene, 
 - [Appendix: Object Detection for Natural Scene](#Appendix-Object-Detection-for-Natural-Scene)
 
   - [Tutorial](#Tutorial)
-
   - [Dataset](#Dataset)
-
   - [Papers](#Papers )
-
     - [Notes](#Notes)
-
     - [Review](#Review)
     - [Object Detection](#Object-Detection)
     - [Instance Segmentation](#Instance-Segmentation)
@@ -61,7 +41,7 @@ A curated list of awesome resources for semantic understanding of aerial scene, 
 
 ------
 
-[TOC]
+
 
 ## Tutorials
 
